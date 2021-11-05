@@ -274,7 +274,7 @@ void CHOpenGLView::DrawGLScene()
 
 	m_B70011205.DrawSpaceship();
 	m_B70011205.DrawSphere();
-	//m_B70011205.DrawXYZ();
+	m_B70011205.DrawXYZ();
 	
 	m_B70011205.SetLight(); //과제 6.광원 설정하기
 	//m_B70011205.SetSpotLight(); //과제 7.Spot light 사용하
