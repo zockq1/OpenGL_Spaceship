@@ -7,11 +7,9 @@
 class B711205
 {
 public:
-	void DrawXYZ();
-	void DrawCube();
 	void SetLight();
-	void SetSpotLight();
 	void DrawSpaceship();
 	void DrawSphere();
+
 };
 

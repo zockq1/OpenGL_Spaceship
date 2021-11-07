@@ -5,7 +5,7 @@
 #pragma once
 #include <gl\gl.H>
 #include <gl\glu.H>
-//#include <gl\glut.h>
+#include <gl\glut.h>
 #include <gl\glaux.H>
 
 
@@ -29,13 +29,17 @@ public:
 public:
 	HDC	m_hDC;
 	HGLRC m_hglRC;
-	B711205 m_B70011205;
+	B711205 m_B711205;
 
 	BOOL m_move;
 	int m_viewtype;
 	CPoint m_anchor;
 	CPoint m_current;
 	GLfloat m_camera_x, m_camera_y;
+	GLfloat m_spaceship_x, m_spaceship_y, m_spaceship_z;
+	GLfloat m_speed;
+	GLfloat m_angle_lr, m_angle_tb; //좌우각도, 상하각도
+	BOOL m_check_l, m_check_r, m_check_t, m_check_b;
 
 	BOOL SetDevicePixelFormat(HDC hdc);
 	void InitGL(void);
@@ -74,6 +78,7 @@ public:
 	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
 	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
 	afx_msg void OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags);
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
 };
 
 #ifndef _DEBUG  // HOpenGLView.cpp의 디버그 버전
